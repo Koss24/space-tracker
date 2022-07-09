@@ -1,0 +1,60 @@
+[2022-06-18 05:06:52,670] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.my_etl manual__2022-06-18T05:01:37.248535+00:00 [queued]>
+[2022-06-18 05:06:52,681] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.my_etl manual__2022-06-18T05:01:37.248535+00:00 [queued]>
+[2022-06-18 05:06:52,681] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-18 05:06:52,681] {taskinstance.py:1357} INFO - Starting attempt 2 of 2
+[2022-06-18 05:06:52,681] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-18 05:06:52,705] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): my_etl> on 2022-06-18 05:01:37.248535+00:00
+[2022-06-18 05:06:52,713] {standard_task_runner.py:52} INFO - Started process 134 to run task
+[2022-06-18 05:06:52,717] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'test', 'my_etl', 'manual__2022-06-18T05:01:37.248535+00:00', '--job-id', '123', '--raw', '--subdir', 'DAGS_FOLDER/test-dag.py', '--cfg-path', '/tmp/tmp7sf9fzj0', '--error-file', '/tmp/tmp02vuc0ik']
+[2022-06-18 05:06:52,718] {standard_task_runner.py:80} INFO - Job 123: Subtask my_etl
+[2022-06-18 05:06:52,794] {task_command.py:370} INFO - Running <TaskInstance: test.my_etl manual__2022-06-18T05:01:37.248535+00:00 [running]> on host 98ef215c91ca
+[2022-06-18 05:06:52,928] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=test
+AIRFLOW_CTX_TASK_ID=my_etl
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-18T05:01:37.248535+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-18T05:01:37.248535+00:00
+[2022-06-18 05:07:03,110] {logging_mixin.py:115} INFO -                                                 title  ...                                                url
+0                 newSoftware Engineer - Intern/Co-op  ...  https://ca.indeed.com/rc/clk?jk=0ee1559c24a34e...
+1                      newSoftware Engineering Intern  ...  https://ca.indeed.com/rc/clk?jk=9868590178c109...
+2                      newSoftware Engineering Intern  ...  https://ca.indeed.com/rc/clk?jk=ff663ba3d6b730...
+3   newSummer Intern: Professional Services Softwa...  ...  https://ca.indeed.com/rc/clk?jk=58bb07dfc3229f...
+4                           Software Developer Intern  ...  https://ca.indeed.com/rc/clk?jk=92e75e59e3c0a0...
+5                      newSoftware Engineering Intern  ...  https://ca.indeed.com/rc/clk?jk=0793d983ef7a8b...
+6            Software Developer Intern, MS, Fall 2022  ...  https://ca.indeed.com/rc/clk?jk=f0c2273cc6ed69...
+7             Software Development Engineering Intern  ...  https://ca.indeed.com/rc/clk?jk=b37f5967ce21e3...
+8                       newFront End Developer Intern  ...  https://ca.indeed.com/company/RatherME-Inc./jo...
+9                           Intern, Software Engineer  ...  https://ca.indeed.com/rc/clk?jk=344a8a2ea0b60d...
+10  newSoftware Developer - User Experience (Inter...  ...  https://ca.indeed.com/rc/clk?jk=f561aa19396f07...
+11                        Web Developer Summer Intern  ...  https://ca.indeed.com/company/Vaughan-Public-L...
+12                               WEB DEVELOPER INTERN  ...  https://ca.indeed.com/rc/clk?jk=a4d8dda65bbd8b...
+13                 Software Development Intern - Dash  ...  https://ca.indeed.com/rc/clk?jk=18d2d9e3922781...
+14              Fall 2022 - Software Developer Intern  ...  https://ca.indeed.com/rc/clk?jk=fb88c3258de70b...
+
+[15 rows x 6 columns]
+[2022-06-18 05:07:03,112] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/job_etl.py", line 96, in run_job_etl
+    conn = psycopg2.connect(conn_string)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Cannot assign requested address
+	Is the server running on that host and accepting TCP/IP connections?
+
+[2022-06-18 05:07:03,127] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=test, task_id=my_etl, execution_date=20220618T050137, start_date=20220618T050652, end_date=20220618T050703
+[2022-06-18 05:07:03,155] {standard_task_runner.py:97} ERROR - Failed to execute job 123 for task my_etl (connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Cannot assign requested address
+	Is the server running on that host and accepting TCP/IP connections?
+; 134)
+[2022-06-18 05:07:03,183] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-18 05:07:03,238] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

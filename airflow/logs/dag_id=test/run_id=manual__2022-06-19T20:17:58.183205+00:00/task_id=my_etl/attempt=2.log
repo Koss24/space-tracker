@@ -1,0 +1,50 @@
+[2022-06-19 20:23:14,397] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.my_etl manual__2022-06-19T20:17:58.183205+00:00 [queued]>
+[2022-06-19 20:23:14,406] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.my_etl manual__2022-06-19T20:17:58.183205+00:00 [queued]>
+[2022-06-19 20:23:14,406] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-19 20:23:14,406] {taskinstance.py:1357} INFO - Starting attempt 2 of 2
+[2022-06-19 20:23:14,406] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-19 20:23:14,430] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): my_etl> on 2022-06-19 20:17:58.183205+00:00
+[2022-06-19 20:23:14,440] {standard_task_runner.py:52} INFO - Started process 8506 to run task
+[2022-06-19 20:23:14,444] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'test', 'my_etl', 'manual__2022-06-19T20:17:58.183205+00:00', '--job-id', '233', '--raw', '--subdir', 'DAGS_FOLDER/test-dag.py', '--cfg-path', '/tmp/tmpjsu4eful', '--error-file', '/tmp/tmpiykhsl1o']
+[2022-06-19 20:23:14,445] {standard_task_runner.py:80} INFO - Job 233: Subtask my_etl
+[2022-06-19 20:23:14,517] {task_command.py:370} INFO - Running <TaskInstance: test.my_etl manual__2022-06-19T20:17:58.183205+00:00 [running]> on host ca189b65812b
+[2022-06-19 20:23:14,663] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=test
+AIRFLOW_CTX_TASK_ID=my_etl
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-19T20:17:58.183205+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-19T20:17:58.183205+00:00
+[2022-06-19 20:23:23,507] {logging_mixin.py:115} INFO -                                                 title  ...                                                url
+0                 newSoftware Engineer - Intern/Co-op  ...  https://ca.indeed.com/rc/clk?jk=0ee1559c24a34e...
+1                      newSoftware Engineering Intern  ...  https://ca.indeed.com/rc/clk?jk=ff663ba3d6b730...
+2                         Software Engineering Intern  ...  https://ca.indeed.com/rc/clk?jk=9868590178c109...
+3                           Software Developer Intern  ...  https://ca.indeed.com/rc/clk?jk=92e75e59e3c0a0...
+4   Summer Intern: Professional Services Software ...  ...  https://ca.indeed.com/rc/clk?jk=58bb07dfc3229f...
+5                         Software Engineering Intern  ...  https://ca.indeed.com/rc/clk?jk=0793d983ef7a8b...
+6            Software Developer Intern, MS, Fall 2022  ...  https://ca.indeed.com/rc/clk?jk=f0c2273cc6ed69...
+7   newSoftware Developer - User Experience (Inter...  ...  https://ca.indeed.com/rc/clk?jk=f561aa19396f07...
+8             Software Development Engineering Intern  ...  https://ca.indeed.com/rc/clk?jk=b37f5967ce21e3...
+9                          Front End Developer Intern  ...  https://ca.indeed.com/company/RatherME-Inc./jo...
+10              newJunior Software Developer - Intern  ...  https://ca.indeed.com/company/Convverge-Inc./j...
+11                        Web Developer Summer Intern  ...  https://ca.indeed.com/company/Vaughan-Public-L...
+12                 Software Development Intern - Dash  ...  https://ca.indeed.com/rc/clk?jk=18d2d9e3922781...
+13                               WEB DEVELOPER INTERN  ...  https://ca.indeed.com/rc/clk?jk=a4d8dda65bbd8b...
+14                          Intern, Software Engineer  ...  https://ca.indeed.com/rc/clk?jk=344a8a2ea0b60d...
+
+[15 rows x 6 columns]
+[2022-06-19 20:23:23,507] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/job_etl.py", line 99, in run_job_etl
+    print(engine.query.all())
+AttributeError: 'Engine' object has no attribute 'query'
+[2022-06-19 20:23:23,521] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=test, task_id=my_etl, execution_date=20220619T201758, start_date=20220619T202314, end_date=20220619T202323
+[2022-06-19 20:23:23,548] {standard_task_runner.py:97} ERROR - Failed to execute job 233 for task my_etl ('Engine' object has no attribute 'query'; 8506)
+[2022-06-19 20:23:23,583] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-19 20:23:23,800] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

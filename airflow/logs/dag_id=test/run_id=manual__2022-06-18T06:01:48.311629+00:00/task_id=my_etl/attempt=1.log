@@ -1,0 +1,56 @@
+[2022-06-18 06:01:50,345] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.my_etl manual__2022-06-18T06:01:48.311629+00:00 [queued]>
+[2022-06-18 06:01:50,354] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.my_etl manual__2022-06-18T06:01:48.311629+00:00 [queued]>
+[2022-06-18 06:01:50,354] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-18 06:01:50,355] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-18 06:01:50,355] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-18 06:01:50,372] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): my_etl> on 2022-06-18 06:01:48.311629+00:00
+[2022-06-18 06:01:50,378] {standard_task_runner.py:52} INFO - Started process 92 to run task
+[2022-06-18 06:01:50,382] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'test', 'my_etl', 'manual__2022-06-18T06:01:48.311629+00:00', '--job-id', '197', '--raw', '--subdir', 'DAGS_FOLDER/test-dag.py', '--cfg-path', '/tmp/tmp5dnnch4_', '--error-file', '/tmp/tmpepr9qkij']
+[2022-06-18 06:01:50,383] {standard_task_runner.py:80} INFO - Job 197: Subtask my_etl
+[2022-06-18 06:01:50,469] {task_command.py:370} INFO - Running <TaskInstance: test.my_etl manual__2022-06-18T06:01:48.311629+00:00 [running]> on host 6f61ba935082
+[2022-06-18 06:01:50,651] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=test
+AIRFLOW_CTX_TASK_ID=my_etl
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-18T06:01:48.311629+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-18T06:01:48.311629+00:00
+[2022-06-18 06:02:00,896] {logging_mixin.py:115} INFO -                                                 title  ...                                                url
+0                 newSoftware Engineer - Intern/Co-op  ...  https://ca.indeed.com/rc/clk?jk=0ee1559c24a34e...
+1                      newSoftware Engineering Intern  ...  https://ca.indeed.com/rc/clk?jk=ff663ba3d6b730...
+2                           Software Developer Intern  ...  https://ca.indeed.com/rc/clk?jk=92e75e59e3c0a0...
+3                      newSoftware Engineering Intern  ...  https://ca.indeed.com/rc/clk?jk=9868590178c109...
+4                           Intern, Software Engineer  ...  https://ca.indeed.com/rc/clk?jk=344a8a2ea0b60d...
+5                            Software Engineer Intern  ...  https://ca.indeed.com/company/Rocket-Science-D...
+6   newSoftware Developer - User Experience (Inter...  ...  https://ca.indeed.com/rc/clk?jk=f561aa19396f07...
+7             Software Development Engineering Intern  ...  https://ca.indeed.com/rc/clk?jk=b37f5967ce21e3...
+8   newSummer Intern: Professional Services Softwa...  ...  https://ca.indeed.com/rc/clk?jk=58bb07dfc3229f...
+9            Software Developer Intern, MS, Fall 2022  ...  https://ca.indeed.com/rc/clk?jk=f0c2273cc6ed69...
+10     Software Engineer Intern (Toronto) - Fall 2022  ...  https://ca.indeed.com/rc/clk?jk=003d391322abc2...
+11                     newSoftware Engineering Intern  ...  https://ca.indeed.com/rc/clk?jk=0793d983ef7a8b...
+12           newSoftware Developer Intern (16 months)  ...  https://ca.indeed.com/rc/clk?jk=f0fb76ffbb7377...
+13              newJunior Software Developer - Intern  ...  https://ca.indeed.com/company/Convverge-Inc./j...
+14            Intern Full Stack Developer - Fall 2022  ...  https://ca.indeed.com/rc/clk?jk=2f695f27fda871...
+
+[15 rows x 6 columns]
+[2022-06-18 06:02:00,897] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/job_etl.py", line 96, in run_job_etl
+    conn = psycopg2.connect(conn_string)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "host.docker.internal" (172.17.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+[2022-06-18 06:02:00,910] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=test, task_id=my_etl, execution_date=20220618T060148, start_date=20220618T060150, end_date=20220618T060200
+[2022-06-18 06:02:00,931] {standard_task_runner.py:97} ERROR - Failed to execute job 197 for task my_etl (connection to server at "host.docker.internal" (172.17.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+; 92)
+[2022-06-18 06:02:00,982] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-18 06:02:01,039] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

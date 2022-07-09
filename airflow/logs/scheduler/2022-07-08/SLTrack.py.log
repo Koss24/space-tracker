@@ -1,0 +1,60 @@
+[2022-07-08 22:11:50,912] {processor.py:153} INFO - Started process (PID=2738) to work on /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:11:50,913] {processor.py:641} INFO - Processing file /opt/airflow/dags/SLTrack.py for tasks to queue
+[2022-07-08 22:11:50,913] {logging_mixin.py:115} INFO - [2022-07-08 22:11:50,913] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:11:51,220] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:11:51,233] {processor.py:161} INFO - Processing /opt/airflow/dags/SLTrack.py took 0.325 seconds
+[2022-07-08 22:12:21,318] {processor.py:153} INFO - Started process (PID=2769) to work on /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:12:21,330] {processor.py:641} INFO - Processing file /opt/airflow/dags/SLTrack.py for tasks to queue
+[2022-07-08 22:12:21,330] {logging_mixin.py:115} INFO - [2022-07-08 22:12:21,330] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:12:21,628] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:12:21,643] {processor.py:161} INFO - Processing /opt/airflow/dags/SLTrack.py took 0.329 seconds
+[2022-07-08 22:12:51,739] {processor.py:153} INFO - Started process (PID=2795) to work on /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:12:51,740] {processor.py:641} INFO - Processing file /opt/airflow/dags/SLTrack.py for tasks to queue
+[2022-07-08 22:12:51,741] {logging_mixin.py:115} INFO - [2022-07-08 22:12:51,741] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:12:52,033] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:12:52,048] {processor.py:161} INFO - Processing /opt/airflow/dags/SLTrack.py took 0.312 seconds
+[2022-07-08 22:13:22,141] {processor.py:153} INFO - Started process (PID=2826) to work on /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:13:22,154] {processor.py:641} INFO - Processing file /opt/airflow/dags/SLTrack.py for tasks to queue
+[2022-07-08 22:13:22,155] {logging_mixin.py:115} INFO - [2022-07-08 22:13:22,155] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:13:22,480] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:13:22,496] {processor.py:161} INFO - Processing /opt/airflow/dags/SLTrack.py took 0.359 seconds
+[2022-07-08 22:13:52,576] {processor.py:153} INFO - Started process (PID=2857) to work on /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:13:52,586] {processor.py:641} INFO - Processing file /opt/airflow/dags/SLTrack.py for tasks to queue
+[2022-07-08 22:13:52,587] {logging_mixin.py:115} INFO - [2022-07-08 22:13:52,587] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:13:52,863] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:13:52,874] {processor.py:161} INFO - Processing /opt/airflow/dags/SLTrack.py took 0.301 seconds
+[2022-07-08 22:14:22,958] {processor.py:153} INFO - Started process (PID=2883) to work on /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:14:22,986] {processor.py:641} INFO - Processing file /opt/airflow/dags/SLTrack.py for tasks to queue
+[2022-07-08 22:14:22,987] {logging_mixin.py:115} INFO - [2022-07-08 22:14:22,987] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:14:23,269] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:14:23,284] {processor.py:161} INFO - Processing /opt/airflow/dags/SLTrack.py took 0.330 seconds
+[2022-07-08 22:14:53,365] {processor.py:153} INFO - Started process (PID=2915) to work on /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:14:53,366] {processor.py:641} INFO - Processing file /opt/airflow/dags/SLTrack.py for tasks to queue
+[2022-07-08 22:14:53,367] {logging_mixin.py:115} INFO - [2022-07-08 22:14:53,367] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:14:53,635] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:14:53,650] {processor.py:161} INFO - Processing /opt/airflow/dags/SLTrack.py took 0.289 seconds
+[2022-07-08 22:15:23,744] {processor.py:153} INFO - Started process (PID=2937) to work on /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:15:23,752] {processor.py:641} INFO - Processing file /opt/airflow/dags/SLTrack.py for tasks to queue
+[2022-07-08 22:15:23,752] {logging_mixin.py:115} INFO - [2022-07-08 22:15:23,752] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:15:24,028] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:15:24,042] {processor.py:161} INFO - Processing /opt/airflow/dags/SLTrack.py took 0.302 seconds
+[2022-07-08 22:15:54,132] {processor.py:153} INFO - Started process (PID=2968) to work on /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:15:54,161] {processor.py:641} INFO - Processing file /opt/airflow/dags/SLTrack.py for tasks to queue
+[2022-07-08 22:15:54,161] {logging_mixin.py:115} INFO - [2022-07-08 22:15:54,161] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:15:54,452] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:15:54,467] {processor.py:161} INFO - Processing /opt/airflow/dags/SLTrack.py took 0.339 seconds
+[2022-07-08 22:16:24,556] {processor.py:153} INFO - Started process (PID=3000) to work on /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:16:24,567] {processor.py:641} INFO - Processing file /opt/airflow/dags/SLTrack.py for tasks to queue
+[2022-07-08 22:16:24,568] {logging_mixin.py:115} INFO - [2022-07-08 22:16:24,568] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:16:24,888] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:16:24,903] {processor.py:161} INFO - Processing /opt/airflow/dags/SLTrack.py took 0.351 seconds
+[2022-07-08 22:16:55,005] {processor.py:153} INFO - Started process (PID=3023) to work on /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:16:55,017] {processor.py:641} INFO - Processing file /opt/airflow/dags/SLTrack.py for tasks to queue
+[2022-07-08 22:16:55,018] {logging_mixin.py:115} INFO - [2022-07-08 22:16:55,017] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:16:55,310] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:16:55,321] {processor.py:161} INFO - Processing /opt/airflow/dags/SLTrack.py took 0.321 seconds
+[2022-07-08 22:17:25,424] {processor.py:153} INFO - Started process (PID=3055) to work on /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:17:25,433] {processor.py:641} INFO - Processing file /opt/airflow/dags/SLTrack.py for tasks to queue
+[2022-07-08 22:17:25,434] {logging_mixin.py:115} INFO - [2022-07-08 22:17:25,433] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:17:25,763] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/SLTrack.py
+[2022-07-08 22:17:25,779] {processor.py:161} INFO - Processing /opt/airflow/dags/SLTrack.py took 0.360 seconds

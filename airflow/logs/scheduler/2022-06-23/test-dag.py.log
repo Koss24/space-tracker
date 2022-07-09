@@ -1,0 +1,266 @@
+[2022-06-23 01:17:26,982] {processor.py:153} INFO - Started process (PID=88) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 01:17:26,983] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 01:17:26,984] {logging_mixin.py:115} INFO - [2022-06-23 01:17:26,984] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 01:17:32,447] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 01:17:32,467] {logging_mixin.py:115} INFO - [2022-06-23 01:17:32,467] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 01:17:32,489] {logging_mixin.py:115} INFO - [2022-06-23 01:17:32,489] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 01:17:32,524] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 5.546 seconds
+[2022-06-23 01:18:02,998] {processor.py:153} INFO - Started process (PID=171) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 01:18:03,013] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 01:18:03,014] {logging_mixin.py:115} INFO - [2022-06-23 01:18:03,014] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 01:18:03,396] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 01:18:03,418] {logging_mixin.py:115} INFO - [2022-06-23 01:18:03,417] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 01:18:03,437] {logging_mixin.py:115} INFO - [2022-06-23 01:18:03,437] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 01:18:03,453] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.459 seconds
+[2022-06-23 23:30:18,238] {processor.py:153} INFO - Started process (PID=51) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:30:18,263] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:30:18,264] {logging_mixin.py:115} INFO - [2022-06-23 23:30:18,264] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:30:21,408] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:30:21,472] {logging_mixin.py:115} INFO - [2022-06-23 23:30:21,472] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:30:21,495] {logging_mixin.py:115} INFO - [2022-06-23 23:30:21,494] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 23:30:21,614] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 3.380 seconds
+[2022-06-23 23:30:51,717] {processor.py:153} INFO - Started process (PID=113) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:30:51,729] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:30:51,730] {logging_mixin.py:115} INFO - [2022-06-23 23:30:51,730] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:30:52,177] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:30:52,196] {logging_mixin.py:115} INFO - [2022-06-23 23:30:52,196] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:30:52,219] {logging_mixin.py:115} INFO - [2022-06-23 23:30:52,219] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 23:30:52,241] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.527 seconds
+[2022-06-23 23:31:22,377] {processor.py:153} INFO - Started process (PID=177) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:31:22,377] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:31:22,378] {logging_mixin.py:115} INFO - [2022-06-23 23:31:22,378] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:31:22,787] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:31:22,813] {logging_mixin.py:115} INFO - [2022-06-23 23:31:22,813] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:31:22,835] {logging_mixin.py:115} INFO - [2022-06-23 23:31:22,835] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 23:31:22,860] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.488 seconds
+[2022-06-23 23:31:23,774] {processor.py:153} INFO - Started process (PID=181) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:31:23,775] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:31:23,776] {logging_mixin.py:115} INFO - [2022-06-23 23:31:23,776] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:31:24,210] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:31:24,229] {logging_mixin.py:115} INFO - [2022-06-23 23:31:24,229] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:31:24,253] {logging_mixin.py:115} INFO - [2022-06-23 23:31:24,253] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 23:31:24,265] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.495 seconds
+[2022-06-23 23:31:54,368] {processor.py:153} INFO - Started process (PID=247) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:31:54,377] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:31:54,377] {logging_mixin.py:115} INFO - [2022-06-23 23:31:54,377] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:31:54,766] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:31:54,789] {logging_mixin.py:115} INFO - [2022-06-23 23:31:54,789] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:31:54,809] {logging_mixin.py:115} INFO - [2022-06-23 23:31:54,809] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 23:31:54,824] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.459 seconds
+[2022-06-23 23:32:15,387] {processor.py:153} INFO - Started process (PID=291) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:32:15,410] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:32:15,411] {logging_mixin.py:115} INFO - [2022-06-23 23:32:15,411] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:32:15,797] {logging_mixin.py:115} INFO - [2022-06-23 23:32:15,796] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/test-dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test-dag.py", line 10, in <module>
+    dummy_task = DummyOperator(task_id='Dummy_task')
+NameError: name 'DummyOperator' is not defined
+[2022-06-23 23:32:15,797] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:32:15,828] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.445 seconds
+[2022-06-23 23:32:38,685] {processor.py:153} INFO - Started process (PID=345) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:32:38,685] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:32:38,685] {logging_mixin.py:115} INFO - [2022-06-23 23:32:38,685] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:32:39,081] {processor.py:651} INFO - DAG(s) dict_keys(['Planet-Data']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:32:39,147] {logging_mixin.py:115} INFO - [2022-06-23 23:32:39,146] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:32:39,165] {logging_mixin.py:115} INFO - [2022-06-23 23:32:39,165] {dag.py:2931} INFO - Setting next_dagrun for Planet-Data to 2022-06-23T00:00:00+00:00, run_after=2023-06-23T00:00:00+00:00
+[2022-06-23 23:32:39,203] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.521 seconds
+[2022-06-23 23:33:09,382] {processor.py:153} INFO - Started process (PID=399) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:33:09,392] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:33:09,393] {logging_mixin.py:115} INFO - [2022-06-23 23:33:09,392] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:33:09,823] {processor.py:651} INFO - DAG(s) dict_keys(['Planet-Data']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:33:09,850] {logging_mixin.py:115} INFO - [2022-06-23 23:33:09,850] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:33:09,876] {logging_mixin.py:115} INFO - [2022-06-23 23:33:09,876] {dag.py:2931} INFO - Setting next_dagrun for Planet-Data to 2022-06-23T00:00:00+00:00, run_after=2023-06-23T00:00:00+00:00
+[2022-06-23 23:33:09,892] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.514 seconds
+[2022-06-23 23:33:40,738] {processor.py:153} INFO - Started process (PID=462) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:33:40,738] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:33:40,739] {logging_mixin.py:115} INFO - [2022-06-23 23:33:40,739] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:33:41,133] {processor.py:651} INFO - DAG(s) dict_keys(['Planet-Data']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:33:41,155] {logging_mixin.py:115} INFO - [2022-06-23 23:33:41,154] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:33:41,175] {logging_mixin.py:115} INFO - [2022-06-23 23:33:41,175] {dag.py:2931} INFO - Setting next_dagrun for Planet-Data to 2022-06-23T00:00:00+00:00, run_after=2023-06-23T00:00:00+00:00
+[2022-06-23 23:33:41,192] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.458 seconds
+[2022-06-23 23:34:11,870] {processor.py:153} INFO - Started process (PID=526) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:34:11,870] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:34:11,871] {logging_mixin.py:115} INFO - [2022-06-23 23:34:11,871] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:34:12,272] {processor.py:651} INFO - DAG(s) dict_keys(['Planet-Data']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:34:12,293] {logging_mixin.py:115} INFO - [2022-06-23 23:34:12,293] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:34:12,318] {logging_mixin.py:115} INFO - [2022-06-23 23:34:12,317] {dag.py:2931} INFO - Setting next_dagrun for Planet-Data to 2022-06-23T00:00:00+00:00, run_after=2023-06-23T00:00:00+00:00
+[2022-06-23 23:34:12,332] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.467 seconds
+[2022-06-23 23:34:27,073] {processor.py:153} INFO - Started process (PID=548) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:34:27,073] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:34:27,073] {logging_mixin.py:115} INFO - [2022-06-23 23:34:27,073] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:34:27,497] {processor.py:651} INFO - DAG(s) dict_keys(['Planet-Data']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:34:27,555] {logging_mixin.py:115} INFO - [2022-06-23 23:34:27,554] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:34:27,571] {logging_mixin.py:115} INFO - [2022-06-23 23:34:27,571] {dag.py:2931} INFO - Setting next_dagrun for Planet-Data to 2022-06-23T00:00:00+00:00, run_after=2023-06-23T00:00:00+00:00
+[2022-06-23 23:34:27,589] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.520 seconds
+[2022-06-23 23:34:57,744] {processor.py:153} INFO - Started process (PID=612) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:34:57,759] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:34:57,760] {logging_mixin.py:115} INFO - [2022-06-23 23:34:57,759] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:34:58,167] {processor.py:651} INFO - DAG(s) dict_keys(['Planet-Data']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:34:58,189] {logging_mixin.py:115} INFO - [2022-06-23 23:34:58,188] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:34:58,209] {logging_mixin.py:115} INFO - [2022-06-23 23:34:58,209] {dag.py:2931} INFO - Setting next_dagrun for Planet-Data to 2022-06-23T00:00:00+00:00, run_after=2023-06-23T00:00:00+00:00
+[2022-06-23 23:34:58,227] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.485 seconds
+[2022-06-23 23:35:10,638] {processor.py:153} INFO - Started process (PID=645) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:35:10,639] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:35:10,640] {logging_mixin.py:115} INFO - [2022-06-23 23:35:10,640] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:35:11,071] {processor.py:651} INFO - DAG(s) dict_keys(['Planet-Data']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:35:11,135] {logging_mixin.py:115} INFO - [2022-06-23 23:35:11,135] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:35:11,156] {logging_mixin.py:115} INFO - [2022-06-23 23:35:11,156] {dag.py:2931} INFO - Setting next_dagrun for Planet-Data to 2022-06-23T00:00:00+00:00, run_after=2023-06-23T00:00:00+00:00
+[2022-06-23 23:35:11,194] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.561 seconds
+[2022-06-23 23:35:41,241] {processor.py:153} INFO - Started process (PID=699) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:35:41,258] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:35:41,259] {logging_mixin.py:115} INFO - [2022-06-23 23:35:41,259] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:35:41,647] {processor.py:651} INFO - DAG(s) dict_keys(['Planet-Data']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:35:41,666] {logging_mixin.py:115} INFO - [2022-06-23 23:35:41,666] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:35:41,687] {logging_mixin.py:115} INFO - [2022-06-23 23:35:41,687] {dag.py:2931} INFO - Setting next_dagrun for Planet-Data to 2022-06-23T00:00:00+00:00, run_after=2023-06-23T00:00:00+00:00
+[2022-06-23 23:35:41,710] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.473 seconds
+[2022-06-23 23:36:11,899] {processor.py:153} INFO - Started process (PID=762) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:36:11,907] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:36:11,908] {logging_mixin.py:115} INFO - [2022-06-23 23:36:11,908] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:36:12,303] {processor.py:651} INFO - DAG(s) dict_keys(['Planet-Data']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:36:12,329] {logging_mixin.py:115} INFO - [2022-06-23 23:36:12,329] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:36:12,350] {logging_mixin.py:115} INFO - [2022-06-23 23:36:12,350] {dag.py:2931} INFO - Setting next_dagrun for Planet-Data to 2022-06-23T00:00:00+00:00, run_after=2023-06-23T00:00:00+00:00
+[2022-06-23 23:36:12,366] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.472 seconds
+[2022-06-23 23:36:43,137] {processor.py:153} INFO - Started process (PID=825) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:36:43,155] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:36:43,155] {logging_mixin.py:115} INFO - [2022-06-23 23:36:43,155] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:36:43,556] {processor.py:651} INFO - DAG(s) dict_keys(['Planet-Data']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:36:43,582] {logging_mixin.py:115} INFO - [2022-06-23 23:36:43,582] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:36:43,602] {logging_mixin.py:115} INFO - [2022-06-23 23:36:43,601] {dag.py:2931} INFO - Setting next_dagrun for Planet-Data to 2022-06-23T00:00:00+00:00, run_after=2023-06-23T00:00:00+00:00
+[2022-06-23 23:36:43,617] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.484 seconds
+[2022-06-23 23:37:11,696] {processor.py:153} INFO - Started process (PID=879) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:37:11,697] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:37:11,697] {logging_mixin.py:115} INFO - [2022-06-23 23:37:11,697] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:37:12,096] {processor.py:651} INFO - DAG(s) dict_keys(['Planet-Data']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:37:12,161] {logging_mixin.py:115} INFO - [2022-06-23 23:37:12,160] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:37:12,183] {logging_mixin.py:115} INFO - [2022-06-23 23:37:12,183] {dag.py:2931} INFO - Setting next_dagrun for Planet-Data to 2022-06-23T00:00:00+00:00, run_after=2023-06-23T00:00:00+00:00
+[2022-06-23 23:37:12,199] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.508 seconds
+[2022-06-23 23:37:42,335] {processor.py:153} INFO - Started process (PID=943) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:37:42,336] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:37:42,336] {logging_mixin.py:115} INFO - [2022-06-23 23:37:42,336] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:37:42,736] {processor.py:651} INFO - DAG(s) dict_keys(['Planet-Data']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:37:42,763] {logging_mixin.py:115} INFO - [2022-06-23 23:37:42,763] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:37:42,784] {logging_mixin.py:115} INFO - [2022-06-23 23:37:42,783] {dag.py:2931} INFO - Setting next_dagrun for Planet-Data to 2022-06-23T00:00:00+00:00, run_after=2023-06-23T00:00:00+00:00
+[2022-06-23 23:37:42,801] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.471 seconds
+[2022-06-23 23:38:12,997] {processor.py:153} INFO - Started process (PID=1006) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:38:13,011] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:38:13,012] {logging_mixin.py:115} INFO - [2022-06-23 23:38:13,012] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:38:13,415] {processor.py:651} INFO - DAG(s) dict_keys(['Planet-Data']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:38:13,443] {logging_mixin.py:115} INFO - [2022-06-23 23:38:13,443] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:38:13,464] {logging_mixin.py:115} INFO - [2022-06-23 23:38:13,464] {dag.py:2931} INFO - Setting next_dagrun for Planet-Data to 2022-06-23T00:00:00+00:00, run_after=2023-06-23T00:00:00+00:00
+[2022-06-23 23:38:13,493] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.501 seconds
+[2022-06-23 23:38:44,482] {processor.py:153} INFO - Started process (PID=1060) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:38:44,494] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:38:44,495] {logging_mixin.py:115} INFO - [2022-06-23 23:38:44,495] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:38:44,913] {processor.py:651} INFO - DAG(s) dict_keys(['Planet-Data']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:38:44,939] {logging_mixin.py:115} INFO - [2022-06-23 23:38:44,939] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:38:44,963] {logging_mixin.py:115} INFO - [2022-06-23 23:38:44,963] {dag.py:2931} INFO - Setting next_dagrun for Planet-Data to 2022-06-23T00:00:00+00:00, run_after=2023-06-23T00:00:00+00:00
+[2022-06-23 23:38:45,052] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.573 seconds
+[2022-06-23 23:39:15,696] {processor.py:153} INFO - Started process (PID=1124) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:39:15,711] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:39:15,711] {logging_mixin.py:115} INFO - [2022-06-23 23:39:15,711] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:39:16,129] {processor.py:651} INFO - DAG(s) dict_keys(['Planet-Data']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:39:16,152] {logging_mixin.py:115} INFO - [2022-06-23 23:39:16,152] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:39:16,171] {logging_mixin.py:115} INFO - [2022-06-23 23:39:16,171] {dag.py:2931} INFO - Setting next_dagrun for Planet-Data to 2022-06-23T00:00:00+00:00, run_after=2023-06-23T00:00:00+00:00
+[2022-06-23 23:39:16,201] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.509 seconds
+[2022-06-23 23:39:31,866] {processor.py:153} INFO - Started process (PID=1146) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:39:31,919] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:39:31,920] {logging_mixin.py:115} INFO - [2022-06-23 23:39:31,919] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:39:32,330] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:39:32,353] {logging_mixin.py:115} INFO - [2022-06-23 23:39:32,353] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:39:32,373] {logging_mixin.py:115} INFO - [2022-06-23 23:39:32,373] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 23:39:32,393] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.531 seconds
+[2022-06-23 23:39:42,324] {processor.py:153} INFO - Started process (PID=1180) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:39:42,360] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:39:42,387] {logging_mixin.py:115} INFO - [2022-06-23 23:39:42,386] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:39:42,775] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:39:42,801] {logging_mixin.py:115} INFO - [2022-06-23 23:39:42,801] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:39:42,820] {logging_mixin.py:115} INFO - [2022-06-23 23:39:42,820] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 23:39:42,851] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.531 seconds
+[2022-06-23 23:39:53,912] {processor.py:153} INFO - Started process (PID=1191) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:39:53,913] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:39:53,913] {logging_mixin.py:115} INFO - [2022-06-23 23:39:53,913] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:39:54,306] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:39:54,331] {logging_mixin.py:115} INFO - [2022-06-23 23:39:54,330] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:39:54,357] {logging_mixin.py:115} INFO - [2022-06-23 23:39:54,356] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 23:39:54,386] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.478 seconds
+[2022-06-23 23:40:25,107] {processor.py:153} INFO - Started process (PID=1254) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:40:25,118] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:40:25,118] {logging_mixin.py:115} INFO - [2022-06-23 23:40:25,118] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:40:25,534] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:40:25,554] {logging_mixin.py:115} INFO - [2022-06-23 23:40:25,554] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:40:25,574] {logging_mixin.py:115} INFO - [2022-06-23 23:40:25,574] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 23:40:25,590] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.487 seconds
+[2022-06-23 23:40:55,665] {processor.py:153} INFO - Started process (PID=1317) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:40:55,684] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:40:55,685] {logging_mixin.py:115} INFO - [2022-06-23 23:40:55,685] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:40:56,080] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:40:56,103] {logging_mixin.py:115} INFO - [2022-06-23 23:40:56,103] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:40:56,124] {logging_mixin.py:115} INFO - [2022-06-23 23:40:56,124] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 23:40:56,154] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.493 seconds
+[2022-06-23 23:41:26,767] {processor.py:153} INFO - Started process (PID=1371) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:41:26,800] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:41:26,801] {logging_mixin.py:115} INFO - [2022-06-23 23:41:26,801] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:41:27,213] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:41:27,238] {logging_mixin.py:115} INFO - [2022-06-23 23:41:27,238] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:41:27,264] {logging_mixin.py:115} INFO - [2022-06-23 23:41:27,264] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 23:41:27,286] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.522 seconds
+[2022-06-23 23:41:58,212] {processor.py:153} INFO - Started process (PID=1434) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:41:58,225] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:41:58,226] {logging_mixin.py:115} INFO - [2022-06-23 23:41:58,225] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:41:58,629] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:41:58,653] {logging_mixin.py:115} INFO - [2022-06-23 23:41:58,653] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:41:58,687] {logging_mixin.py:115} INFO - [2022-06-23 23:41:58,687] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 23:41:58,714] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.506 seconds
+[2022-06-23 23:42:28,811] {processor.py:153} INFO - Started process (PID=1497) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:42:28,842] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:42:28,843] {logging_mixin.py:115} INFO - [2022-06-23 23:42:28,843] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:42:29,250] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:42:29,274] {logging_mixin.py:115} INFO - [2022-06-23 23:42:29,273] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:42:29,294] {logging_mixin.py:115} INFO - [2022-06-23 23:42:29,294] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 23:42:29,320] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.513 seconds
+[2022-06-23 23:42:59,491] {processor.py:153} INFO - Started process (PID=1551) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:42:59,508] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:42:59,509] {logging_mixin.py:115} INFO - [2022-06-23 23:42:59,509] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:42:59,897] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:42:59,918] {logging_mixin.py:115} INFO - [2022-06-23 23:42:59,918] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:42:59,943] {logging_mixin.py:115} INFO - [2022-06-23 23:42:59,942] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 23:42:59,975] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.490 seconds
+[2022-06-23 23:43:30,032] {processor.py:153} INFO - Started process (PID=1614) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:43:30,041] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:43:30,041] {logging_mixin.py:115} INFO - [2022-06-23 23:43:30,041] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:43:30,439] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:43:30,463] {logging_mixin.py:115} INFO - [2022-06-23 23:43:30,462] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:43:30,483] {logging_mixin.py:115} INFO - [2022-06-23 23:43:30,483] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 23:43:30,508] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.480 seconds
+[2022-06-23 23:44:00,633] {processor.py:153} INFO - Started process (PID=1677) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:44:00,649] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:44:00,650] {logging_mixin.py:115} INFO - [2022-06-23 23:44:00,649] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:44:01,067] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:44:01,087] {logging_mixin.py:115} INFO - [2022-06-23 23:44:01,087] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:44:01,108] {logging_mixin.py:115} INFO - [2022-06-23 23:44:01,107] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 23:44:01,133] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.504 seconds
+[2022-06-23 23:44:31,193] {processor.py:153} INFO - Started process (PID=1731) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:44:31,206] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:44:31,207] {logging_mixin.py:115} INFO - [2022-06-23 23:44:31,207] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:44:31,614] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:44:31,640] {logging_mixin.py:115} INFO - [2022-06-23 23:44:31,640] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:44:31,663] {logging_mixin.py:115} INFO - [2022-06-23 23:44:31,663] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 23:44:31,678] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.489 seconds
+[2022-06-23 23:45:02,358] {processor.py:153} INFO - Started process (PID=1796) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:45:02,370] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:45:02,371] {logging_mixin.py:115} INFO - [2022-06-23 23:45:02,371] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:45:02,776] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:45:02,802] {logging_mixin.py:115} INFO - [2022-06-23 23:45:02,802] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:45:02,828] {logging_mixin.py:115} INFO - [2022-06-23 23:45:02,828] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 23:45:02,844] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.490 seconds
+[2022-06-23 23:45:33,041] {processor.py:153} INFO - Started process (PID=1858) to work on /opt/airflow/dags/test-dag.py
+[2022-06-23 23:45:33,053] {processor.py:641} INFO - Processing file /opt/airflow/dags/test-dag.py for tasks to queue
+[2022-06-23 23:45:33,053] {logging_mixin.py:115} INFO - [2022-06-23 23:45:33,053] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:45:33,427] {processor.py:651} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test-dag.py
+[2022-06-23 23:45:33,453] {logging_mixin.py:115} INFO - [2022-06-23 23:45:33,453] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-23 23:45:33,474] {logging_mixin.py:115} INFO - [2022-06-23 23:45:33,474] {dag.py:2931} INFO - Setting next_dagrun for test to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-23 23:45:33,484] {processor.py:161} INFO - Processing /opt/airflow/dags/test-dag.py took 0.448 seconds

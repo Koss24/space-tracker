@@ -1,0 +1,105 @@
+[2022-06-19 20:06:27,847] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.my_etl manual__2022-06-19T20:06:26.671401+00:00 [queued]>
+[2022-06-19 20:06:27,856] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.my_etl manual__2022-06-19T20:06:26.671401+00:00 [queued]>
+[2022-06-19 20:06:27,856] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-19 20:06:27,857] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-19 20:06:27,857] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-19 20:06:27,879] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): my_etl> on 2022-06-19 20:06:26.671401+00:00
+[2022-06-19 20:06:27,887] {standard_task_runner.py:52} INFO - Started process 7709 to run task
+[2022-06-19 20:06:27,891] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'test', 'my_etl', 'manual__2022-06-19T20:06:26.671401+00:00', '--job-id', '223', '--raw', '--subdir', 'DAGS_FOLDER/test-dag.py', '--cfg-path', '/tmp/tmp773tsoji', '--error-file', '/tmp/tmph8etak1r']
+[2022-06-19 20:06:27,892] {standard_task_runner.py:80} INFO - Job 223: Subtask my_etl
+[2022-06-19 20:06:27,979] {task_command.py:370} INFO - Running <TaskInstance: test.my_etl manual__2022-06-19T20:06:26.671401+00:00 [running]> on host ca189b65812b
+[2022-06-19 20:06:28,127] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=test
+AIRFLOW_CTX_TASK_ID=my_etl
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-19T20:06:26.671401+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-19T20:06:26.671401+00:00
+[2022-06-19 20:06:37,761] {logging_mixin.py:115} INFO -                                                 title  ...                                                url
+0                 newSoftware Engineer - Intern/Co-op  ...  https://ca.indeed.com/rc/clk?jk=0ee1559c24a34e...
+1                      newSoftware Engineering Intern  ...  https://ca.indeed.com/rc/clk?jk=ff663ba3d6b730...
+2                         Software Engineering Intern  ...  https://ca.indeed.com/rc/clk?jk=9868590178c109...
+3                           Software Developer Intern  ...  https://ca.indeed.com/rc/clk?jk=92e75e59e3c0a0...
+4            Software Developer Intern, MS, Fall 2022  ...  https://ca.indeed.com/rc/clk?jk=f0c2273cc6ed69...
+5   Summer Intern: Professional Services Software ...  ...  https://ca.indeed.com/rc/clk?jk=58bb07dfc3229f...
+6                         Software Engineering Intern  ...  https://ca.indeed.com/rc/clk?jk=0793d983ef7a8b...
+7   newSoftware Developer - User Experience (Inter...  ...  https://ca.indeed.com/rc/clk?jk=f561aa19396f07...
+8             Software Development Engineering Intern  ...  https://ca.indeed.com/rc/clk?jk=b37f5967ce21e3...
+9                         Web Developer Summer Intern  ...  https://ca.indeed.com/company/Vaughan-Public-L...
+10                 Software Development Intern - Dash  ...  https://ca.indeed.com/rc/clk?jk=18d2d9e3922781...
+11                         Front End Developer Intern  ...  https://ca.indeed.com/company/RatherME-Inc./jo...
+12                               WEB DEVELOPER INTERN  ...  https://ca.indeed.com/rc/clk?jk=a4d8dda65bbd8b...
+13                          Intern, Software Engineer  ...  https://ca.indeed.com/rc/clk?jk=344a8a2ea0b60d...
+14              newJunior Software Developer - Intern  ...  https://ca.indeed.com/company/Convverge-Inc./j...
+
+[15 rows x 6 columns]
+[2022-06-19 20:06:37,786] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1686, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 909, in do_executemany
+    **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/extras.py", line 1270, in execute_values
+    cur.execute(b''.join(parts))
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "jobinfo_pkey"
+DETAIL:  Key (url)=(https://ca.indeed.com/rc/clk?jk=0ee1559c24a34e9f&fccid=936367796261bd6e&vjs=3) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/job_etl.py", line 100, in run_job_etl
+    data.to_sql("jobinfo", engine, index=False, if_exists='append')
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 2882, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 728, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1770, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1350, in insert_records
+    raise err
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1340, in insert_records
+    table.insert(chunksize=chunksize, method=method)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 967, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 882, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1200, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 314, in _execute_on_connection
+    self, multiparams, params, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1399, in _execute_clauseelement
+    cache_hit=cache_hit,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1749, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1930, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1686, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 909, in do_executemany
+    **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/extras.py", line 1270, in execute_values
+    cur.execute(b''.join(parts))
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "jobinfo_pkey"
+DETAIL:  Key (url)=(https://ca.indeed.com/rc/clk?jk=0ee1559c24a34e9f&fccid=936367796261bd6e&vjs=3) already exists.
+
+[SQL: INSERT INTO jobinfo (title, location, compname, salary, jobdesc, url) VALUES (%(title)s, %(location)s, %(compname)s, %(salary)s, %(jobdesc)s, %(url)s)]
+[parameters: ({'title': 'newSoftware Engineer - Intern/Co-op', 'location': 'Hybrid remote in Toronto, ON', 'compname': 'Intel', 'salary': 'N/A', 'jobdesc': "\nJob Description\n Come intern with one of the largest electrical engineering companies in the world.  Come Intern with our Programmable Solutions G ... (2045 characters truncated) ... ture of accessibility. Intel provides accommodations to applicants and employees with disabilities. Find information and request accommodation here\n", 'url': 'https://ca.indeed.com/rc/clk?jk=0ee1559c24a34e9f&fccid=936367796261bd6e&vjs=3'}, {'title': 'newSoftware Engineering Intern', 'location': 'Toronto, ON', 'compname': 'Texas Instruments', 'salary': 'N/A', 'jobdesc': '\n As a global semiconductor company operating in 35 countries, Texas Instruments (TI) is first and foremost a reflection of its people. From the TIe ... (2535 characters truncated) ... n\nFamiliarity with assembly language programming \n\n\n\nKnowledge of software engineering processes and the full software development lifecycle\n\n', 'url': 'https://ca.indeed.com/rc/clk?jk=ff663ba3d6b730be&fccid=d59215ef88e83b80&vjs=3'}, {'title': 'Software Engineering Intern', 'location': 'Ottawa, ON', 'compname': 'Ciena', 'salary': 'N/A', 'jobdesc': '\n\n  Since 1992, Ciena has been driven by a relentless pursuit of network innovation. We believe in a network that grows smarter, more agile, and mo ... (3879 characters truncated) ... y fee/ deposit to individuals/ agencies/ employment portals on the pretext of attending Ciena’s interview process or seeking employment with us.\n \n', 'url': 'https://ca.indeed.com/rc/clk?jk=9868590178c10990&fccid=144a39be55e8440b&vjs=3'}, {'title': 'Software Developer Intern', 'location': 'Remote in Canada+1 location', 'compname': 'Oracle', 'salary': 'N/A', 'jobdesc': "\n\n  Software Developer Intern -220009AF\n  \n\n\n\n Applicants are required to read, write, and speak the following languages\n: English\n  \n\n\n\ ... (4565 characters truncated) ... the Fair Labor Standards Act.\n  \n\n\n\n\n\nJob: Product Development\n Location: Canada\n Job Type: Temporary Employee Hire\n Organization: Oracle\n", 'url': 'https://ca.indeed.com/rc/clk?jk=92e75e59e3c0a08b&fccid=cd22d01053af7669&vjs=3'}, {'title': 'Software Developer Intern, MS, Fall 2022', 'location': 'Hybrid remote in Montréal, QC', 'compname': 'Google', 'salary': 'N/A', 'jobdesc': "\nYou can submit your application for this role starting May 9, 2022. Please complete your application before July 2, 2022.\n Participation in the in ... (5166 characters truncated) ... Law. If you have a disability or special need that requires accommodation, please let us know by completing our Accommodations for Applicants form.\n", 'url': 'https://ca.indeed.com/rc/clk?jk=f0c2273cc6ed6968&fccid=a5b4499d9e91a5c6&vjs=3'}, {'title': 'Summer Intern: Professional Services Software Developer', 'location': 'Remote', 'compname': 'Ciena', 'salary': 'N/A', 'jobdesc': '\n\n  Since 1992, Ciena has been driven by a relentless pursuit of network innovation. We believe in a network that grows smarter, more agile, and mo ... (4264 characters truncated) ... y fee/ deposit to individuals/ agencies/ employment portals on the pretext of attending Ciena’s interview process or seeking employment with us.\n \n', 'url': 'https://ca.indeed.com/rc/clk?jk=58bb07dfc3229fe3&fccid=144a39be55e8440b&vjs=3'}, {'title': 'Software Engineering Intern', 'location': 'Toronto, ON+1 location', 'compname': 'Citco', 'salary': 'N/A', 'jobdesc': '\nSoftware Engineering Intern - Ending April 2023\n Toronto, Canada\n\n About Citco\n Citco is a global leader in fund services, corporate governance ... (2321 characters truncated) ... tions from people with disabilities. Accommodations are available upon request for candidates taking part in all aspects of the selection.  #LI-AR1\n', 'url': 'https://ca.indeed.com/rc/clk?jk=0793d983ef7a8b41&fccid=58a0b6e7b7d51d7e&vjs=3'}, {'title': 'newSoftware Developer - User Experience (Intern - Fall 2022)', 'location': 'Ottawa, ON', 'compname': 'Micro Focus', 'salary': 'N/A', 'jobdesc': '\n\nJob Description:\n\n Interset Software, a Micro Focus company, is not your traditional co-op placement or internship; we have a start-up feel wit ... (2403 characters truncated) ... al origin, age, disability, marital or veteran status, sexual orientation, genetic information, citizenship or any other legally protected status\n\n', 'url': 'https://ca.indeed.com/rc/clk?jk=f561aa19396f0736&fccid=83cbd453678ade10&vjs=3'}  ... displaying 10 of 15 total bound parameter sets ...  {'title': 'Intern, Software Engineer', 'location': 'Remote in Toronto, ON', 'compname': 'Autodesk', 'salary': 'N/A', 'jobdesc': "\n\n  Position Overview\n \n\n   The Business Process Team is looking for a driven and naturally curious Software Engineer Intern who can hit the gro ... (2454 characters truncated) ... open jobs and apply internally (not on this external site). If you have any questions or require support, contact \n  \n   Autodesk Careers\n  .\n \n", 'url': 'https://ca.indeed.com/rc/clk?jk=344a8a2ea0b60dfa&fccid=7136762d065a5ad7&vjs=3'}, {'title': 'newJunior Software Developer - Intern', 'location': 'Calgary, AB', 'compname': 'Convverge Inc.', 'salary': 'N/A', 'jobdesc': 'Junior Software Developer - Intern \nAt Convverge, we are driven by technology, innovation, and the opportunity to work with amazing clients. We buil ... (3265 characters truncated) ... ing (PowerShell, Bash)\n\n\nExperience with GIT\n\nJob Types: Full-time, Internship / Co-opContract length: 8 months\nSchedule:\n\nMonday to Friday\n', 'url': 'https://ca.indeed.com/company/Convverge-Inc./jobs/Junior-Software-Developer-e35d389a7e0d5cc1?fccid=d69805c705e31f58&vjs=3'})]
+(Background on this error at: http://sqlalche.me/e/14/gkpj)
+[2022-06-19 20:06:37,803] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=test, task_id=my_etl, execution_date=20220619T200626, start_date=20220619T200627, end_date=20220619T200637
+[2022-06-19 20:06:37,829] {standard_task_runner.py:97} ERROR - Failed to execute job 223 for task my_etl ((psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "jobinfo_pkey"
+DETAIL:  Key (url)=(https://ca.indeed.com/rc/clk?jk=0ee1559c24a34e9f&fccid=936367796261bd6e&vjs=3) already exists.
+
+[SQL: INSERT INTO jobinfo (title, location, compname, salary, jobdesc, url) VALUES (%(title)s, %(location)s, %(compname)s, %(salary)s, %(jobdesc)s, %(url)s)]
+[parameters: ({'title': 'newSoftware Engineer - Intern/Co-op', 'location': 'Hybrid remote in Toronto, ON', 'compname': 'Intel', 'salary': 'N/A', 'jobdesc': "\nJob Description\n Come intern with one of the largest electrical engineering companies in the world.  Come Intern with our Programmable Solutions G ... (2045 characters truncated) ... ture of accessibility. Intel provides accommodations to applicants and employees with disabilities. Find information and request accommodation here\n", 'url': 'https://ca.indeed.com/rc/clk?jk=0ee1559c24a34e9f&fccid=936367796261bd6e&vjs=3'}, {'title': 'newSoftware Engineering Intern', 'location': 'Toronto, ON', 'compname': 'Texas Instruments', 'salary': 'N/A', 'jobdesc': '\n As a global semiconductor company operating in 35 countries, Texas Instruments (TI) is first and foremost a reflection of its people. From the TIe ... (2535 characters truncated) ... n\nFamiliarity with assembly language programming \n\n\n\nKnowledge of software engineering processes and the full software development lifecycle\n\n', 'url': 'https://ca.indeed.com/rc/clk?jk=ff663ba3d6b730be&fccid=d59215ef88e83b80&vjs=3'}, {'title': 'Software Engineering Intern', 'location': 'Ottawa, ON', 'compname': 'Ciena', 'salary': 'N/A', 'jobdesc': '\n\n  Since 1992, Ciena has been driven by a relentless pursuit of network innovation. We believe in a network that grows smarter, more agile, and mo ... (3879 characters truncated) ... y fee/ deposit to individuals/ agencies/ employment portals on the pretext of attending Ciena’s interview process or seeking employment with us.\n \n', 'url': 'https://ca.indeed.com/rc/clk?jk=9868590178c10990&fccid=144a39be55e8440b&vjs=3'}, {'title': 'Software Developer Intern', 'location': 'Remote in Canada+1 location', 'compname': 'Oracle', 'salary': 'N/A', 'jobdesc': "\n\n  Software Developer Intern -220009AF\n  \n\n\n\n Applicants are required to read, write, and speak the following languages\n: English\n  \n\n\n\ ... (4565 characters truncated) ... the Fair Labor Standards Act.\n  \n\n\n\n\n\nJob: Product Development\n Location: Canada\n Job Type: Temporary Employee Hire\n Organization: Oracle\n", 'url': 'https://ca.indeed.com/rc/clk?jk=92e75e59e3c0a08b&fccid=cd22d01053af7669&vjs=3'}, {'title': 'Software Developer Intern, MS, Fall 2022', 'location': 'Hybrid remote in Montréal, QC', 'compname': 'Google', 'salary': 'N/A', 'jobdesc': "\nYou can submit your application for this role starting May 9, 2022. Please complete your application before July 2, 2022.\n Participation in the in ... (5166 characters truncated) ... Law. If you have a disability or special need that requires accommodation, please let us know by completing our Accommodations for Applicants form.\n", 'url': 'https://ca.indeed.com/rc/clk?jk=f0c2273cc6ed6968&fccid=a5b4499d9e91a5c6&vjs=3'}, {'title': 'Summer Intern: Professional Services Software Developer', 'location': 'Remote', 'compname': 'Ciena', 'salary': 'N/A', 'jobdesc': '\n\n  Since 1992, Ciena has been driven by a relentless pursuit of network innovation. We believe in a network that grows smarter, more agile, and mo ... (4264 characters truncated) ... y fee/ deposit to individuals/ agencies/ employment portals on the pretext of attending Ciena’s interview process or seeking employment with us.\n \n', 'url': 'https://ca.indeed.com/rc/clk?jk=58bb07dfc3229fe3&fccid=144a39be55e8440b&vjs=3'}, {'title': 'Software Engineering Intern', 'location': 'Toronto, ON+1 location', 'compname': 'Citco', 'salary': 'N/A', 'jobdesc': '\nSoftware Engineering Intern - Ending April 2023\n Toronto, Canada\n\n About Citco\n Citco is a global leader in fund services, corporate governance ... (2321 characters truncated) ... tions from people with disabilities. Accommodations are available upon request for candidates taking part in all aspects of the selection.  #LI-AR1\n', 'url': 'https://ca.indeed.com/rc/clk?jk=0793d983ef7a8b41&fccid=58a0b6e7b7d51d7e&vjs=3'}, {'title': 'newSoftware Developer - User Experience (Intern - Fall 2022)', 'location': 'Ottawa, ON', 'compname': 'Micro Focus', 'salary': 'N/A', 'jobdesc': '\n\nJob Description:\n\n Interset Software, a Micro Focus company, is not your traditional co-op placement or internship; we have a start-up feel wit ... (2403 characters truncated) ... al origin, age, disability, marital or veteran status, sexual orientation, genetic information, citizenship or any other legally protected status\n\n', 'url': 'https://ca.indeed.com/rc/clk?jk=f561aa19396f0736&fccid=83cbd453678ade10&vjs=3'}  ... displaying 10 of 15 total bound parameter sets ...  {'title': 'Intern, Software Engineer', 'location': 'Remote in Toronto, ON', 'compname': 'Autodesk', 'salary': 'N/A', 'jobdesc': "\n\n  Position Overview\n \n\n   The Business Process Team is looking for a driven and naturally curious Software Engineer Intern who can hit the gro ... (2454 characters truncated) ... open jobs and apply internally (not on this external site). If you have any questions or require support, contact \n  \n   Autodesk Careers\n  .\n \n", 'url': 'https://ca.indeed.com/rc/clk?jk=344a8a2ea0b60dfa&fccid=7136762d065a5ad7&vjs=3'}, {'title': 'newJunior Software Developer - Intern', 'location': 'Calgary, AB', 'compname': 'Convverge Inc.', 'salary': 'N/A', 'jobdesc': 'Junior Software Developer - Intern \nAt Convverge, we are driven by technology, innovation, and the opportunity to work with amazing clients. We buil ... (3265 characters truncated) ... ing (PowerShell, Bash)\n\n\nExperience with GIT\n\nJob Types: Full-time, Internship / Co-opContract length: 8 months\nSchedule:\n\nMonday to Friday\n', 'url': 'https://ca.indeed.com/company/Convverge-Inc./jobs/Junior-Software-Developer-e35d389a7e0d5cc1?fccid=d69805c705e31f58&vjs=3'})]
+(Background on this error at: http://sqlalche.me/e/14/gkpj); 7709)
+[2022-06-19 20:06:37,869] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-19 20:06:37,912] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

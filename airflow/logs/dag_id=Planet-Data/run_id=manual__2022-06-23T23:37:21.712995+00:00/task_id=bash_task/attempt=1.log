@@ -1,0 +1,34 @@
+[2022-06-23 23:37:24,165] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Planet-Data.bash_task manual__2022-06-23T23:37:21.712995+00:00 [queued]>
+[2022-06-23 23:37:24,174] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Planet-Data.bash_task manual__2022-06-23T23:37:21.712995+00:00 [queued]>
+[2022-06-23 23:37:24,174] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-23 23:37:24,174] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-06-23 23:37:24,174] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-23 23:37:24,195] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): bash_task> on 2022-06-23 23:37:21.712995+00:00
+[2022-06-23 23:37:24,203] {standard_task_runner.py:52} INFO - Started process 414 to run task
+[2022-06-23 23:37:24,207] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Planet-Data', 'bash_task', 'manual__2022-06-23T23:37:21.712995+00:00', '--job-id', '266', '--raw', '--subdir', 'DAGS_FOLDER/test-dag.py', '--cfg-path', '/tmp/tmpli58miuk', '--error-file', '/tmp/tmpob69fkl9']
+[2022-06-23 23:37:24,208] {standard_task_runner.py:80} INFO - Job 266: Subtask bash_task
+[2022-06-23 23:37:24,284] {task_command.py:370} INFO - Running <TaskInstance: Planet-Data.bash_task manual__2022-06-23T23:37:21.712995+00:00 [running]> on host df692cbe9db8
+[2022-06-23 23:37:24,392] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Planet-Data
+AIRFLOW_CTX_TASK_ID=bash_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-23T23:37:21.712995+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-23T23:37:21.712995+00:00
+[2022-06-23 23:37:24,393] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-23 23:37:24,393] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'wget http://exoplanet.eu/catalog/csv/']
+[2022-06-23 23:37:24,404] {subprocess.py:85} INFO - Output:
+[2022-06-23 23:37:24,405] {subprocess.py:92} INFO - bash: line 1: wget: command not found
+[2022-06-23 23:37:24,406] {subprocess.py:96} INFO - Command exited with return code 127
+[2022-06-23 23:37:24,427] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 127.
+[2022-06-23 23:37:24,431] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=Planet-Data, task_id=bash_task, execution_date=20220623T233721, start_date=20220623T233724, end_date=20220623T233724
+[2022-06-23 23:37:24,455] {standard_task_runner.py:97} ERROR - Failed to execute job 266 for task bash_task (Bash command failed. The command returned a non-zero exit code 127.; 414)
+[2022-06-23 23:37:24,498] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-23 23:37:24,554] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

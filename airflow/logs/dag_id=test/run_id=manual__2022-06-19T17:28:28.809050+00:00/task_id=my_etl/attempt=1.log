@@ -1,0 +1,162 @@
+[2022-06-19 17:28:31,227] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.my_etl manual__2022-06-19T17:28:28.809050+00:00 [queued]>
+[2022-06-19 17:28:31,242] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.my_etl manual__2022-06-19T17:28:28.809050+00:00 [queued]>
+[2022-06-19 17:28:31,242] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-19 17:28:31,242] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-19 17:28:31,242] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-19 17:28:31,303] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): my_etl> on 2022-06-19 17:28:28.809050+00:00
+[2022-06-19 17:28:31,312] {standard_task_runner.py:52} INFO - Started process 405 to run task
+[2022-06-19 17:28:31,316] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'test', 'my_etl', 'manual__2022-06-19T17:28:28.809050+00:00', '--job-id', '218', '--raw', '--subdir', 'DAGS_FOLDER/test-dag.py', '--cfg-path', '/tmp/tmp9k43uz7g', '--error-file', '/tmp/tmp0mhcbr_y']
+[2022-06-19 17:28:31,317] {standard_task_runner.py:80} INFO - Job 218: Subtask my_etl
+[2022-06-19 17:28:31,428] {task_command.py:370} INFO - Running <TaskInstance: test.my_etl manual__2022-06-19T17:28:28.809050+00:00 [running]> on host ca189b65812b
+[2022-06-19 17:28:31,542] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=test
+AIRFLOW_CTX_TASK_ID=my_etl
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-19T17:28:28.809050+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-19T17:28:28.809050+00:00
+[2022-06-19 17:28:41,523] {logging_mixin.py:115} INFO -                                                 title  ...                                                url
+0                 newSoftware Engineer - Intern/Co-op  ...  https://ca.indeed.com/rc/clk?jk=0ee1559c24a34e...
+1                      newSoftware Engineering Intern  ...  https://ca.indeed.com/rc/clk?jk=ff663ba3d6b730...
+2                         Software Engineering Intern  ...  https://ca.indeed.com/rc/clk?jk=9868590178c109...
+3                           Software Developer Intern  ...  https://ca.indeed.com/rc/clk?jk=92e75e59e3c0a0...
+4   Summer Intern: Professional Services Software ...  ...  https://ca.indeed.com/rc/clk?jk=58bb07dfc3229f...
+5            Software Developer Intern, MS, Fall 2022  ...  https://ca.indeed.com/rc/clk?jk=f0c2273cc6ed69...
+6                         Software Engineering Intern  ...  https://ca.indeed.com/rc/clk?jk=0793d983ef7a8b...
+7   newSoftware Developer - User Experience (Inter...  ...  https://ca.indeed.com/rc/clk?jk=f561aa19396f07...
+8             Software Development Engineering Intern  ...  https://ca.indeed.com/rc/clk?jk=b37f5967ce21e3...
+9                         Web Developer Summer Intern  ...  https://ca.indeed.com/company/Vaughan-Public-L...
+10                               WEB DEVELOPER INTERN  ...  https://ca.indeed.com/rc/clk?jk=a4d8dda65bbd8b...
+11                 Software Development Intern - Dash  ...  https://ca.indeed.com/rc/clk?jk=18d2d9e3922781...
+12                         Front End Developer Intern  ...  https://ca.indeed.com/company/RatherME-Inc./jo...
+13                          Intern, Software Engineer  ...  https://ca.indeed.com/rc/clk?jk=344a8a2ea0b60d...
+14              Fall 2022 - Software Developer Intern  ...  https://ca.indeed.com/rc/clk?jk=fb88c3258de70b...
+
+[15 rows x 6 columns]
+[2022-06-19 17:28:41,529] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3141, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 301, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 755, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 419, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 145, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 142, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 247, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 362, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 599, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 583, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "host.docker.internal" (172.17.0.1), port 5432 failed: FATAL:  database "job_data" does not exist
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/job_etl.py", line 97, in run_job_etl
+    data.to_sql("jobinfo", engine, index=False, if_exists='append')
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 2882, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 728, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1758, in to_sql
+    dtype=dtype,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1650, in prep_table
+    table.create()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 856, in create
+    if self.exists():
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 840, in exists
+    return self.pd_sql.has_table(self.name, self.schema)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1783, in has_table
+    insp = sa.inspect(self.connectable)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/inspection.py", line 64, in inspect
+    ret = reg(subject)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/reflection.py", line 182, in _engine_insp
+    return Inspector._construct(Inspector._init_engine, bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/reflection.py", line 117, in _construct
+    init(self, bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/reflection.py", line 128, in _init_engine
+    engine.connect().close()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3095, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 91, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3174, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3145, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2004, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3141, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 301, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 755, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 419, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 145, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 142, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 247, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 362, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 599, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 583, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "host.docker.internal" (172.17.0.1), port 5432 failed: FATAL:  database "job_data" does not exist
+
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+[2022-06-19 17:28:41,546] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=test, task_id=my_etl, execution_date=20220619T172828, start_date=20220619T172831, end_date=20220619T172841
+[2022-06-19 17:28:41,576] {standard_task_runner.py:97} ERROR - Failed to execute job 218 for task my_etl ((psycopg2.OperationalError) connection to server at "host.docker.internal" (172.17.0.1), port 5432 failed: FATAL:  database "job_data" does not exist
+
+(Background on this error at: http://sqlalche.me/e/14/e3q8); 405)
+[2022-06-19 17:28:41,626] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-19 17:28:41,675] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
