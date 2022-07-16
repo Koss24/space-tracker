@@ -31,4 +31,7 @@ print('Latitude:', lat)
 print('Longitude:', lon)
 
 curl -c cookies.txt -b cookies.txt https://www.space-track.org/ajaxauth/login -d 'identity=lkosedy24@gmail.com&password=895qPWiGqv6D3cK63bzhEjP'
+
+ty = time.time()
+print(np.round_(time.time()-ty,3),'sec')
 '''

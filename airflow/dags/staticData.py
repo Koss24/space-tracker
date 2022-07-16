@@ -6,7 +6,7 @@ from pendulum import datetime
 #from planetData import get_planet_data
 import pandas as pd
 import sys
-from SLTrack import api_call, load_satellite_data
+from satelliteTrack import api_call, load_satellite_data
 
 default_args = {
     'owner':'airflow',
@@ -16,18 +16,12 @@ default_args = {
 }
 
 dag = DAG(
-    'Sattellite Static Data',
+    'Sattellite_Static_Data',
     default_args=default_args,
     description='Makes an api request to space track to get gp data',
     schedule_interval=timedelta(days=1)
 )
 
-
-api = PythonOperator(
-    task_id='api_request',
-    python_callable=api_call,
-    dag=dag
-)
 
 load = PythonOperator(
     task_id='load_data',

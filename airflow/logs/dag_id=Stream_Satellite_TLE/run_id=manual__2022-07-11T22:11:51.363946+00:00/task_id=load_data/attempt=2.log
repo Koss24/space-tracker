@@ -1,0 +1,90 @@
+[2022-07-11 22:16:58,915] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Stream_Satellite_TLE.load_data manual__2022-07-11T22:11:51.363946+00:00 [queued]>
+[2022-07-11 22:16:58,926] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Stream_Satellite_TLE.load_data manual__2022-07-11T22:11:51.363946+00:00 [queued]>
+[2022-07-11 22:16:58,926] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-11 22:16:58,926] {taskinstance.py:1357} INFO - Starting attempt 2 of 2
+[2022-07-11 22:16:58,927] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-11 22:16:58,952] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): load_data> on 2022-07-11 22:11:51.363946+00:00
+[2022-07-11 22:16:58,959] {standard_task_runner.py:52} INFO - Started process 1969 to run task
+[2022-07-11 22:16:58,963] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Stream_Satellite_TLE', 'load_data', 'manual__2022-07-11T22:11:51.363946+00:00', '--job-id', '494', '--raw', '--subdir', 'DAGS_FOLDER/streamTLE.py', '--cfg-path', '/tmp/tmpo2g_si7d', '--error-file', '/tmp/tmp69ayns6m']
+[2022-07-11 22:16:58,963] {standard_task_runner.py:80} INFO - Job 494: Subtask load_data
+[2022-07-11 22:16:59,035] {task_command.py:370} INFO - Running <TaskInstance: Stream_Satellite_TLE.load_data manual__2022-07-11T22:11:51.363946+00:00 [running]> on host 3c0196e07a8e
+[2022-07-11 22:16:59,173] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Stream_Satellite_TLE
+AIRFLOW_CTX_TASK_ID=load_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-07-11T22:11:51.363946+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-07-11T22:11:51.363946+00:00
+[2022-07-11 22:16:59,211] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1686, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 909, in do_executemany
+    **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/extras.py", line 1270, in execute_values
+    cur.execute(b''.join(parts))
+psycopg2.errors.UndefinedColumn: column "Unnamed: 0" of relation "satellitedata" does not exist
+LINE 1: INSERT INTO satellitedata ("Unnamed: 0", ccsds_omm_vers, com...
+                                   ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/database.py", line 9, in load_into_database
+    data.to_sql('satellitedata', engine, index=False, if_exists='append')
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 2882, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 728, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1770, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1350, in insert_records
+    raise err
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1340, in insert_records
+    table.insert(chunksize=chunksize, method=method)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 967, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 882, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1200, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 314, in _execute_on_connection
+    self, multiparams, params, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1399, in _execute_clauseelement
+    cache_hit=cache_hit,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1749, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1930, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1686, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 909, in do_executemany
+    **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/extras.py", line 1270, in execute_values
+    cur.execute(b''.join(parts))
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column "Unnamed: 0" of relation "satellitedata" does not exist
+LINE 1: INSERT INTO satellitedata ("Unnamed: 0", ccsds_omm_vers, com...
+                                   ^
+
+[SQL: INSERT INTO satellitedata ("Unnamed: 0", ccsds_omm_vers, comment, creation_date, originator, object_name, object_id, center_name, ref_frame, time_system, mean_element_theory, epoch, mean_motion, eccentricity, inclination, ra_of_asc_node, arg_of_pericenter, mean_anomaly, ephemeris_type, classification_type, norad_cat_id, element_set_no, rev_at_epoch, bstar, mean_motion_dot, mean_motion_ddot, semimajor_axis, period, apoapsis, periapsis, object_type, rcs_size, country_code, launch_date, site, decay_date, file, gp_id, tle_line0, tle_line1, tle_line2) VALUES (%(Unnamed: 0)s, %(ccsds_omm_vers)s, %(comment)s, %(creation_date)s, %(originator)s, %(object_name)s, %(object_id)s, %(center_name)s, %(ref_frame)s, %(time_system)s, %(mean_element_theory)s, %(epoch)s, %(mean_motion)s, %(eccentricity)s, %(inclination)s, %(ra_of_asc_node)s, %(arg_of_pericenter)s, %(mean_anomaly)s, %(ephemeris_type)s, %(classification_type)s, %(norad_cat_id)s, %(element_set_no)s, %(rev_at_epoch)s, %(bstar)s, %(mean_motion_dot)s, %(mean_motion_ddot)s, %(semimajor_axis)s, %(period)s, %(apoapsis)s, %(periapsis)s, %(object_type)s, %(rcs_size)s, %(country_code)s, %(launch_date)s, %(site)s, %(decay_date)s, %(file)s, %(gp_id)s, %(tle_line0)s, %(tle_line1)s, %(tle_line2)s)]
+[parameters: ({'Unnamed: 0': 0, 'ccsds_omm_vers': 2, 'comment': 'GENERATED VIA SPACE-TRACK.ORG API', 'creation_date': '2022-07-11T18:03:52', 'originator': '18 SPCS', 'object_name': 'VANGUARD 1', 'object_id': '1958-002B', 'center_name': 'EARTH', 'ref_frame': 'TEME', 'time_system': 'UTC', 'mean_element_theory': 'SGP4', 'epoch': '2022-07-11T07:52:06.939840', 'mean_motion': 10.84974505, 'eccentricity': 0.1847189, 'inclination': 34.2479, 'ra_of_asc_node': 65.8387, 'arg_of_pericenter': 145.0004, 'mean_anomaly': 228.7243, 'ephemeris_type': 0, 'classification_type': 'U', 'norad_cat_id': 5, 'element_set_no': 999, 'rev_at_epoch': 28713, 'bstar': 0.0004127, 'mean_motion_dot': 3.25e-06, 'mean_motion_ddot': 0, 'semimajor_axis': 8618.972, 'period': 132.722, 'apoapsis': 3832.924, 'periapsis': 648.75, 'object_type': 'PAYLOAD', 'rcs_size': 'SMALL', 'country_code': 'US', 'launch_date': '1958-03-17', 'site': 'AFETR', 'decay_date': None, 'file': 3511668, 'gp_id': 207886970, 'tle_line0': '0 VANGUARD 1', 'tle_line1': '1 00005U 58002B   22192.32785810  .00000325  00000-0  41270-3 0  9997', 'tle_line2': '2 00005  34.2479  65.8387 1847189 145.0004 228.7243 10.84974505287137'}, {'Unnamed: 0': 1, 'ccsds_omm_vers': 2, 'comment': 'GENERATED VIA SPACE-TRACK.ORG API', 'creation_date': '2022-07-11T18:03:52', 'originator': '18 SPCS', 'object_name': 'VANGUARD 2', 'object_id': '1959-001A', 'center_name': 'EARTH', 'ref_frame': 'TEME', 'time_system': 'UTC', 'mean_element_theory': 'SGP4', 'epoch': '2022-07-11T10:07:55.843968', 'mean_motion': 11.861501, 'eccentricity': 0.1466505, 'inclination': 32.8705, 'ra_of_asc_node': 103.9419, 'arg_of_pericenter': 188.9408, 'mean_anomaly': 168.2064, 'ephemeris_type': 0, 'classification_type': 'U', 'norad_cat_id': 11, 'element_set_no': 999, 'rev_at_epoch': 36450, 'bstar': 0.00012348, 'mean_motion_dot': 2.61e-06, 'mean_motion_ddot': 0, 'semimajor_axis': 8121.609, 'period': 121.401, 'apoapsis': 2934.512, 'periapsis': 552.436, 'object_type': 'PAYLOAD', 'rcs_size': 'MEDIUM', 'country_code': 'US', 'launch_date': '1959-02-17', 'site': 'AFETR', 'decay_date': None, 'file': 3511668, 'gp_id': 207886710, 'tle_line0': '0 VANGUARD 2', 'tle_line1': '1 00011U 59001A   22192.42217412  .00000261  00000-0  12348-3 0  9996', 'tle_line2': '2 00011  32.8705 103.9419 1466505 188.9408 168.2064 11.86150100364509'})]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2022-07-11 22:16:59,226] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=Stream_Satellite_TLE, task_id=load_data, execution_date=20220711T221151, start_date=20220711T221658, end_date=20220711T221659
+[2022-07-11 22:16:59,260] {standard_task_runner.py:97} ERROR - Failed to execute job 494 for task load_data ((psycopg2.errors.UndefinedColumn) column "Unnamed: 0" of relation "satellitedata" does not exist
+LINE 1: INSERT INTO satellitedata ("Unnamed: 0", ccsds_omm_vers, com...
+                                   ^
+
+[SQL: INSERT INTO satellitedata ("Unnamed: 0", ccsds_omm_vers, comment, creation_date, originator, object_name, object_id, center_name, ref_frame, time_system, mean_element_theory, epoch, mean_motion, eccentricity, inclination, ra_of_asc_node, arg_of_pericenter, mean_anomaly, ephemeris_type, classification_type, norad_cat_id, element_set_no, rev_at_epoch, bstar, mean_motion_dot, mean_motion_ddot, semimajor_axis, period, apoapsis, periapsis, object_type, rcs_size, country_code, launch_date, site, decay_date, file, gp_id, tle_line0, tle_line1, tle_line2) VALUES (%(Unnamed: 0)s, %(ccsds_omm_vers)s, %(comment)s, %(creation_date)s, %(originator)s, %(object_name)s, %(object_id)s, %(center_name)s, %(ref_frame)s, %(time_system)s, %(mean_element_theory)s, %(epoch)s, %(mean_motion)s, %(eccentricity)s, %(inclination)s, %(ra_of_asc_node)s, %(arg_of_pericenter)s, %(mean_anomaly)s, %(ephemeris_type)s, %(classification_type)s, %(norad_cat_id)s, %(element_set_no)s, %(rev_at_epoch)s, %(bstar)s, %(mean_motion_dot)s, %(mean_motion_ddot)s, %(semimajor_axis)s, %(period)s, %(apoapsis)s, %(periapsis)s, %(object_type)s, %(rcs_size)s, %(country_code)s, %(launch_date)s, %(site)s, %(decay_date)s, %(file)s, %(gp_id)s, %(tle_line0)s, %(tle_line1)s, %(tle_line2)s)]
+[parameters: ({'Unnamed: 0': 0, 'ccsds_omm_vers': 2, 'comment': 'GENERATED VIA SPACE-TRACK.ORG API', 'creation_date': '2022-07-11T18:03:52', 'originator': '18 SPCS', 'object_name': 'VANGUARD 1', 'object_id': '1958-002B', 'center_name': 'EARTH', 'ref_frame': 'TEME', 'time_system': 'UTC', 'mean_element_theory': 'SGP4', 'epoch': '2022-07-11T07:52:06.939840', 'mean_motion': 10.84974505, 'eccentricity': 0.1847189, 'inclination': 34.2479, 'ra_of_asc_node': 65.8387, 'arg_of_pericenter': 145.0004, 'mean_anomaly': 228.7243, 'ephemeris_type': 0, 'classification_type': 'U', 'norad_cat_id': 5, 'element_set_no': 999, 'rev_at_epoch': 28713, 'bstar': 0.0004127, 'mean_motion_dot': 3.25e-06, 'mean_motion_ddot': 0, 'semimajor_axis': 8618.972, 'period': 132.722, 'apoapsis': 3832.924, 'periapsis': 648.75, 'object_type': 'PAYLOAD', 'rcs_size': 'SMALL', 'country_code': 'US', 'launch_date': '1958-03-17', 'site': 'AFETR', 'decay_date': None, 'file': 3511668, 'gp_id': 207886970, 'tle_line0': '0 VANGUARD 1', 'tle_line1': '1 00005U 58002B   22192.32785810  .00000325  00000-0  41270-3 0  9997', 'tle_line2': '2 00005  34.2479  65.8387 1847189 145.0004 228.7243 10.84974505287137'}, {'Unnamed: 0': 1, 'ccsds_omm_vers': 2, 'comment': 'GENERATED VIA SPACE-TRACK.ORG API', 'creation_date': '2022-07-11T18:03:52', 'originator': '18 SPCS', 'object_name': 'VANGUARD 2', 'object_id': '1959-001A', 'center_name': 'EARTH', 'ref_frame': 'TEME', 'time_system': 'UTC', 'mean_element_theory': 'SGP4', 'epoch': '2022-07-11T10:07:55.843968', 'mean_motion': 11.861501, 'eccentricity': 0.1466505, 'inclination': 32.8705, 'ra_of_asc_node': 103.9419, 'arg_of_pericenter': 188.9408, 'mean_anomaly': 168.2064, 'ephemeris_type': 0, 'classification_type': 'U', 'norad_cat_id': 11, 'element_set_no': 999, 'rev_at_epoch': 36450, 'bstar': 0.00012348, 'mean_motion_dot': 2.61e-06, 'mean_motion_ddot': 0, 'semimajor_axis': 8121.609, 'period': 121.401, 'apoapsis': 2934.512, 'periapsis': 552.436, 'object_type': 'PAYLOAD', 'rcs_size': 'MEDIUM', 'country_code': 'US', 'launch_date': '1959-02-17', 'site': 'AFETR', 'decay_date': None, 'file': 3511668, 'gp_id': 207886710, 'tle_line0': '0 VANGUARD 2', 'tle_line1': '1 00011U 59001A   22192.42217412  .00000261  00000-0  12348-3 0  9996', 'tle_line2': '2 00011  32.8705 103.9419 1466505 188.9408 168.2064 11.86150100364509'})]
+(Background on this error at: http://sqlalche.me/e/14/f405); 1969)
+[2022-07-11 22:16:59,294] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-07-11 22:16:59,351] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
